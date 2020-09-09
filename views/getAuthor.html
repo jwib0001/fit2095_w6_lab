@@ -1,0 +1,56 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+
+    body {
+      background-image: url('background2.jpg');
+    }
+
+  </style>
+</head>
+
+<body>
+    <a href="/">HOME </a>
+    <a href="/addAuthor">Add Author</a>
+    <a href="/addBook">Add Book </a>
+    <a href="/getBook">Book list </a>
+    <a href="/deleteBook">Delete Book </a>
+    <a href="/updateAuthor">Update Author </a>
+
+  <h2>List Of Author</h2>
+
+  <table>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Date of Birth</th>
+      <th>#Books</th>
+      <th>State</th>
+      <th>Suburb</th>
+      <th>Street</th>
+      <th>Unit</th>
+      <th>ID</th>
+    </tr>
+    <% for(let i = 0; i < au.length; i++) { %>
+    <tr>
+      <td><%= i+1 %></td>
+      <td> <%= au[i].name.firstName%> </td>
+      <td> <%= au[i].name.lastName%> </td>
+      <td> <%= new Date(au[i].dob).toLocaleDateString()%> </td>
+      <td> <%= au[i].numBooks%> </td>
+      <td> <%= au[i].address.state%> </td>
+      <td> <%= au[i].address.suburb%> </td>
+      <td> <%= au[i].address.street%> </td>
+      <td> <%= au[i].address.unit%> </td>
+      <td> <%= au[i]._id %> </td>
+    </tr>
+    <% } %>
+
+  </table>
+
+</body>
+
+</html>

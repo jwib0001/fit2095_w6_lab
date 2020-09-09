@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      background-image: url('background2.jpg');
+    }
+
+  </style>
+</head>
+
+<body>
+    <a href="/">HOME </a>
+    <a href="/getAuthor">Author List </a>
+    <a href="/addAuthor">Add Author </a>
+    <a href="/getBook">Book list </a>
+    <a href="/addBook">Add Book </a>
+    <a href="/deleteBook">Delete Book </a>
+
+  <form method="POST" action="/updateAuthorPost">
+    <div class="container">
+      <h1>Update Author</h1>
+      <p>Please fill in this form to update Author.</p>
+      <hr>
+      <label for="_id"><b>ID</b></label>
+      <input type="text" placeholder="Enter ID" name="_id" id="_id" required>
+
+      <label for="numBooks"><b>Number of Books</b></label>
+      <input type="number" placeholder="Enter Number of Books" name="numBooks" id="numBooks" required>
+      <hr>
+
+      <button type="submit" class="registerbtn">Update Author</button>
+    </div>
+  </form>
+
+</body>
+
+</html>

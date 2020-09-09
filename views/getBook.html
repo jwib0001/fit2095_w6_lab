@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+        body {
+            background-image: url('background2.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <a href="/">HOME </a>
+    <a href="/addAuthor">Add Author</a>
+    <a href="/addBook">Add Book </a>
+    <a href="/getAuthor">Author list </a>
+    <a href="/deleteBook">Delete Book </a>
+    <a href="/updateAuthor">Update Author </a>
+
+    <h2>List Of Books</h2>
+
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>ISBN</th>
+            <th>Date of Publication</th>
+            <th>Summary</th>
+        </tr>
+        <% for(let i = 0; i < bo.length; i++) { %>
+        <tr>
+            <td><%= (i+1) %></td>
+            <td> <%= bo[i].title%> </td>
+            <td> <%= bo[i].author.name.firstName+" "+bo[i].author.name.lastName%> </td>
+            <td> <%= bo[i].isbn%> </td>
+            <!-- <td> <%= bo[i].dop%> </td> -->
+            <td><%= new Date(bo[i].dop).toLocaleDateString()%> </td>
+            <td> <%= bo[i].summary%> </td>
+        </tr>
+        <% } %>
+    </table>
+
+</body>
+
+</html>
